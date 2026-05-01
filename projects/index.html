@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kittinan Boonkoom | Frontend Developer - Building clean, scalable web & mobile experiences.">
+    <title>Kittinan Boonkoom | Frontend Developer</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-bg: #FFFFFF;
+            --color-navy: #0A1628;
+            --color-royal: #1E3A8A;
+            --color-sky: #3B82F6;
+            --color-light: #EFF6FF;
+            --font-main: 'Inter', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-navy);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            color: var(--color-navy);
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-sky);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-royal);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--color-sky);
+            color: var(--color-sky);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-light);
+            transform: translateY(-2px);
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: 60px;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--color-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-sky);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: var(--color-bg);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--color-royal);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            color: #4B5563;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .profile-frame {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 4px solid var(--color-sky);
+            padding: 8px;
+            margin: 0 auto;
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: var(--color-light);
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 2rem;
+            color: #4B5563;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card h4 {
+            font-size: 1.1rem;
+            color: var(--color-royal);
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: var(--color-light);
+        }
+
+        .skills-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-light);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background-color: var(--color-light);
+            color: var(--color-royal);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f0f0f0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: #6B7280;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tag {
+            font-size: 0.75rem;
+            color: var(--color-sky);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .project-links {
+            margin-top: auto;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-links a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-sky);
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .placeholder-card {
+            border: 2px dashed #D1D5DB;
+            background-color: var(--color-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: none;
+        }
+
+        .placeholder-card:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .placeholder-card p {
+            color: #9CA3AF;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-navy);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a:hover {
+            color: var(--color-sky);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            margin-top: 2rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Kittinan Boonkoom</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </div>
+
+    <header id="hero">
+        <div class="hero-bg">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 L100 0 L100 100 Z" fill="var(--color-sky)" />
+                <path d="M0 0 L100 100 L0 100 Z" fill="var(--color-royal)" opacity="0.5" />
+            </svg>
+        </div>
+        <div class="container hero-content">
+            <h1 class="reveal">Kittinan Boonkoom</h1>
+            <h2 class="reveal">Frontend Developer</h2>
+            <p class="reveal">Building clean, scalable web & mobile experiences</p>
+            <a href="#projects" class="btn btn-primary reveal">View My Work</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <div class="about-grid">
+                <div class="reveal">
+                    <div class="profile-frame">
+                        <!-- REPLACE: add your photo as profile.jpg in the same folder -->
+                        <img src="profile.jpg" alt="Kittinan Boonkoom" onerror="this.src='https://via.placeholder.com/300?text=Profile+Image'" />
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, I'm Kittinan — a Frontend Developer passionate about building intuitive web and mobile applications. 
+                        I specialize in React, React Native, and TypeScript, with hands-on experience connecting REST APIs 
+                        and crafting component-based UIs.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h4>2 Projects Completed</h4>
+                        </div>
+                        <div class="stat-card">
+                            <h4>3+ Frontend Technologies</h4>
+                        </div>
+                        <div class="stat-card">
+                            <h4>React & React Native</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div class="skills-header reveal">
+                    <h2>Skills</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category reveal">
+                        <h3>Frontend Web</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Mobile Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">REST API Integration</span>
+                            <span class="skill-tag">State Management</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal">
+                        <h3>Computer Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">RISC-V CPU Design</span>
+                            <span class="skill-tag">Digital Logic Simulation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <div class="skills-header reveal">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Card 1 -->
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <!-- REPLACE: add screenshot as projects/longdo.jpg -->
+                        <img src="projects\LongDo.png" alt="Longdo Project" onerror="this.src='https://via.placeholder.com/400x250?text=Longdo+Project'" />
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <h3>Longdo</h3>
+                        <p>A web application for searching and previewing movies. Designed and developed with a component-based approach using React and TypeScript.</p>
+                        <div class="project-links">
+                            <a href="https://azazxxc147896325-beep.github.io/LongDo/#/">Live Demo</a>
+                            <a href="https://github.com/azazxxc147896325/LongDo">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-card reveal">
+                    <div class="project-img">
+                        <!-- REPLACE: add screenshot as projects/DPU_Unilife.PNG -->
+                        <img src="projects\DPU_Unilife.png" alt="DPU Unilife Project" onerror="this.src='https://via.placeholder.com/400x250?text=DPU+Unilife+Project'" />
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">React Native</span>
+                            <span class="project-tag">REST API</span>
+                        </div>
+                        <h3>DPU Unilife</h3>
+                        <p>A mobile frontend application for university life management. Integrated REST APIs, managed app state, and delivered a smooth UI experience.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Benz-Strb/DPU_UniLife.git" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <div class="project-card placeholder-card reveal">
+                    <p>More projects coming soon...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Kittinan Boonkoom</div>
+            <div class="social-links">
+                <!-- REPLACE: update social links -->
+                <a href="https://github.com/azazxxc147896325-beep" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="https://line.me/ti/p/y2--UgvvMr" target="_blank" rel="noopener noreferrer" aria-label="LINE">LINE</a>
+                <a href="mailto:kittinan.kb@gmail.com" aria-label="Email">Email</a>
+            </div>
+            <p class="copyright">&copy; 2025 Kittinan Boonkoom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Hide/Show navbar on scroll
+            if (currentScroll > lastScroll && currentScroll > 500) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        menuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for Reveal Animations
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Reveal only once
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Smooth Scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
