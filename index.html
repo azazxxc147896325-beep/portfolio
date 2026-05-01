@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kittinan Boonkoom | Frontend Developer - Building clean, scalable web & mobile experiences.">
+    <meta name="description"
+        content="Kittinan Boonkoom | Frontend Developer - Building clean, scalable web & mobile experiences.">
     <title>Kittinan Boonkoom | Frontend Developer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -20,16 +24,24 @@
             --cream: #F5F0E8;
             --warm-white: #FAFAF8;
             --muted: #94A3B8;
-            --border: rgba(255,255,255,0.08);
-            --border-light: rgba(255,255,255,0.15);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-light: rgba(255, 255, 255, 0.15);
             --font-display: 'Fraunces', Georgia, serif;
             --font-body: 'Space Grotesk', sans-serif;
             --ease: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--font-body);
@@ -50,12 +62,26 @@
             z-index: 9999;
         }
 
-        h1, h2, h3 { font-family: var(--font-display); }
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-display);
+        }
 
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
         /* ─── NAVBAR ─── */
         nav {
@@ -88,9 +114,14 @@
             color: var(--warm-white);
         }
 
-        .logo span { color: var(--blue-bright); }
+        .logo span {
+            color: var(--blue-bright);
+        }
 
-        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
 
         .nav-links a {
             font-size: 0.85rem;
@@ -101,7 +132,9 @@
             transition: color 0.3s;
         }
 
-        .nav-links a:hover { color: var(--warm-white); }
+        .nav-links a:hover {
+            color: var(--warm-white);
+        }
 
         .mobile-menu-btn {
             display: none;
@@ -129,7 +162,9 @@
             transition: transform 0.4s var(--ease);
         }
 
-        .mobile-nav.active { transform: translateX(0); }
+        .mobile-nav.active {
+            transform: translateX(0);
+        }
 
         .mobile-nav a {
             font-family: var(--font-display);
@@ -138,7 +173,9 @@
             color: var(--muted);
         }
 
-        .mobile-nav a:hover { color: var(--warm-white); }
+        .mobile-nav a:hover {
+            color: var(--warm-white);
+        }
 
         /* ─── HERO ─── */
         #hero {
@@ -159,22 +196,33 @@
         }
 
         .orb-1 {
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 70%);
-            top: -100px; right: -100px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
             animation: float 8s ease-in-out infinite;
         }
 
         .orb-2 {
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(96,165,250,0.12) 0%, transparent 70%);
-            bottom: 0; left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.12) 0%, transparent 70%);
+            bottom: 0;
+            left: -100px;
             animation: float 10s ease-in-out infinite reverse;
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-40px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-40px);
+            }
         }
 
         /* Grid lines decoration */
@@ -189,14 +237,17 @@
             pointer-events: none;
         }
 
-        .hero-content { position: relative; z-index: 1; }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(37,99,235,0.15);
-            border: 1px solid rgba(96,165,250,0.3);
+            background: rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
             color: var(--blue-glow);
             padding: 0.4rem 1rem;
             border-radius: 100px;
@@ -208,15 +259,25 @@
 
         .hero-badge::before {
             content: '';
-            width: 6px; height: 6px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background: var(--blue-bright);
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.8);
+            }
         }
 
         .hero-content h1 {
@@ -262,12 +323,12 @@
             font-size: 0.9rem;
             letter-spacing: 0.02em;
             transition: all 0.3s var(--ease);
-            box-shadow: 0 0 30px rgba(37,99,235,0.4);
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
         }
 
         .btn-glow:hover {
             transform: translateY(-3px);
-            box-shadow: 0 0 50px rgba(37,99,235,0.6);
+            box-shadow: 0 0 50px rgba(37, 99, 235, 0.6);
             background: #1D4ED8;
         }
 
@@ -314,8 +375,17 @@
         }
 
         @keyframes scrollAnim {
-            0%, 100% { opacity: 1; transform: scaleY(1); }
-            50% { opacity: 0.3; transform: scaleY(0.5); }
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            50% {
+                opacity: 0.3;
+                transform: scaleY(0.5);
+            }
         }
 
         /* ─── SECTION HEADERS ─── */
@@ -374,7 +444,7 @@
             position: absolute;
             inset: -20px;
             border-radius: 50%;
-            border: 1px solid rgba(96,165,250,0.15);
+            border: 1px solid rgba(96, 165, 250, 0.15);
         }
 
         .profile-frame img {
@@ -405,7 +475,9 @@
             letter-spacing: -0.02em;
         }
 
-        .about-text .section-title { margin-bottom: 1.5rem; }
+        .about-text .section-title {
+            margin-bottom: 1.5rem;
+        }
 
         .about-text p {
             color: var(--muted);
@@ -431,7 +503,9 @@
             transition: background 0.3s;
         }
 
-        .stat-card:hover { background: #112240; }
+        .stat-card:hover {
+            background: #112240;
+        }
 
         .stat-card .stat-num {
             font-family: var(--font-display);
@@ -458,7 +532,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(37,99,235,0.03) 50%, transparent 100%);
+            background: linear-gradient(180deg, transparent 0%, rgba(37, 99, 235, 0.03) 50%, transparent 100%);
             pointer-events: none;
         }
 
@@ -483,7 +557,9 @@
             transition: background 0.3s;
         }
 
-        .skill-category:hover { background: #0f1e38; }
+        .skill-category:hover {
+            background: #0f1e38;
+        }
 
         .skill-category::before {
             content: '';
@@ -497,7 +573,9 @@
             transition: opacity 0.3s;
         }
 
-        .skill-category:hover::before { opacity: 1; }
+        .skill-category:hover::before {
+            opacity: 1;
+        }
 
         .skill-icon {
             font-size: 1.5rem;
@@ -520,8 +598,8 @@
         }
 
         .skill-tag {
-            background: rgba(37,99,235,0.1);
-            border: 1px solid rgba(96,165,250,0.2);
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             color: var(--blue-glow);
             padding: 0.35rem 0.85rem;
             border-radius: 100px;
@@ -531,7 +609,7 @@
         }
 
         .skill-tag:hover {
-            background: rgba(37,99,235,0.25);
+            background: rgba(37, 99, 235, 0.25);
             border-color: var(--blue-bright);
             color: var(--warm-white);
         }
@@ -571,7 +649,7 @@
             inset: 0;
             border-radius: 16px;
             border: 1px solid transparent;
-            background: linear-gradient(135deg, rgba(96,165,250,0.2), transparent) border-box;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), transparent) border-box;
             -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: destination-out;
             mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
@@ -583,11 +661,13 @@
 
         .project-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(96,165,250,0.3);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 30px rgba(37,99,235,0.1);
+            border-color: rgba(96, 165, 250, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 30px rgba(37, 99, 235, 0.1);
         }
 
-        .project-card:hover::before { opacity: 1; }
+        .project-card:hover::before {
+            opacity: 1;
+        }
 
         .project-img {
             width: 100%;
@@ -614,7 +694,9 @@
             display: block;
         }
 
-        .project-card:hover .project-img img { transform: scale(1.08); }
+        .project-card:hover .project-img img {
+            transform: scale(1.08);
+        }
 
         .project-info {
             padding: 1.5rem;
@@ -672,10 +754,12 @@
             transition: color 0.2s;
         }
 
-        .project-links a:hover { color: var(--blue-bright); }
+        .project-links a:hover {
+            color: var(--blue-bright);
+        }
 
         .placeholder-card {
-            border: 1px dashed rgba(255,255,255,0.1);
+            border: 1px dashed rgba(255, 255, 255, 0.1);
             background: transparent;
             display: flex;
             align-items: center;
@@ -688,7 +772,7 @@
         .placeholder-card:hover {
             transform: none;
             box-shadow: none;
-            border-color: rgba(96,165,250,0.2);
+            border-color: rgba(96, 165, 250, 0.2);
         }
 
         .placeholder-inner {
@@ -773,6 +857,93 @@
             color: var(--muted);
         }
 
+        /* ─── REVEAL ANIMATIONS ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal-delay-4 {
+            transition-delay: 0.4s;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .profile-frame {
+                margin: 0 auto;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+
+            .projects-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .hero-scroll {
+                display: none;
+            }
+
+            #about,
+            #skills,
+            #projects {
+                padding: 80px 0;
+            }
+        }
+
         /* ─── INTERESTED POSITIONS ─── */
         #positions {
             padding: 120px 0;
@@ -803,26 +974,28 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(37,99,235,0.06) 0%, transparent 60%);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
             opacity: 0;
             transition: opacity 0.4s;
             pointer-events: none;
         }
 
         .position-card:hover {
-            border-color: rgba(96,165,250,0.35);
+            border-color: rgba(96, 165, 250, 0.35);
             transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3), 0 0 25px rgba(37,99,235,0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 25px rgba(37, 99, 235, 0.08);
         }
 
-        .position-card:hover::after { opacity: 1; }
+        .position-card:hover::after {
+            opacity: 1;
+        }
 
         .position-icon {
             width: 52px;
             height: 52px;
             border-radius: 14px;
-            background: rgba(37,99,235,0.12);
-            border: 1px solid rgba(96,165,250,0.2);
+            background: rgba(37, 99, 235, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -832,11 +1005,13 @@
         }
 
         .position-card:hover .position-icon {
-            background: rgba(37,99,235,0.22);
+            background: rgba(37, 99, 235, 0.22);
             border-color: var(--blue-bright);
         }
 
-        .position-body { flex: 1; }
+        .position-body {
+            flex: 1;
+        }
 
         .position-label {
             font-size: 0.7rem;
@@ -869,8 +1044,8 @@
             align-items: center;
             gap: 0.4rem;
             margin-top: 1.25rem;
-            background: rgba(37,99,235,0.1);
-            border: 1px solid rgba(96,165,250,0.2);
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.2);
             color: var(--blue-glow);
             padding: 0.3rem 0.85rem;
             border-radius: 100px;
@@ -880,389 +1055,367 @@
 
         .position-badge::before {
             content: '';
-            width: 5px; height: 5px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             background: var(--blue-bright);
         }
 
         @media (max-width: 768px) {
-            .positions-grid { grid-template-columns: 1fr; }
-            #positions { padding: 80px 0; }
-        }
-
-        /* ─── REVEAL ANIMATIONS ─── */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
-
-        /* ─── RESPONSIVE ─── */
-        @media (max-width: 992px) {
-            .about-grid {
+            .positions-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
             }
 
-            .profile-frame { margin: 0 auto; }
-
-            .projects-grid { grid-template-columns: repeat(2, 1fr); }
-
-            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            #positions {
+                padding: 80px 0;
+            }
         }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .footer-inner { grid-template-columns: 1fr; }
-            .social-links { flex-wrap: wrap; }
-            .projects-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            .hero-scroll { display: none; }
-
-            #about, #skills, #projects { padding: 80px 0; }
-        }
-
-
     </style>
 </head>
+
 <body>
 
 
 
-<!-- NAVBAR -->
-<nav id="navbar">
-    <div class="container nav-content">
-        <a href="#" class="logo">KB<span>.</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#positions">Positions</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-        <button class="mobile-menu-btn" aria-label="Toggle Menu" id="menuBtn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
-            </svg>
-        </button>
-    </div>
-</nav>
-
-<div class="mobile-nav" id="mobileNav">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#positions">Positions</a>
-    <a href="#projects">Projects</a>
-</div>
-
-<!-- HERO -->
-<header id="hero">
-    <div class="hero-grid"></div>
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
-
-    <div class="container hero-content">
-        <div class="hero-badge reveal">Available for opportunities</div>
-        <h1 class="reveal reveal-delay-1">
-            Kittinan<br>
-            <span class="highlight">Boonkoom</span>
-        </h1>
-        <p class="hero-subtitle reveal reveal-delay-2">
-            Frontend Developer crafting clean, scalable web & mobile experiences with React, React Native, and TypeScript.
-        </p>
-        <div class="hero-ctas reveal reveal-delay-3">
-            <a href="#projects" class="btn-glow">View My Work →</a>
-            <a href="mailto:kittinan.kb@gmail.com" class="btn-ghost">Get In Touch</a>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">KB<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#positions">Positions</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" id="menuBtn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
         </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
     </div>
 
-    <div class="hero-scroll">
-        <div class="scroll-line"></div>
-        <span>Scroll</span>
-    </div>
-</header>
+    <!-- HERO -->
+    <header id="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
 
-<main>
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="profile-wrapper reveal">
-                    <div class="profile-frame">
-                        <img src="profile.jpg" alt="Kittinan Boonkoom"
-                            onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';" />
-                        <div class="avatar-placeholder" style="display:none;">KB</div>
-                    </div>
-                </div>
-                <div class="about-text reveal reveal-delay-1">
-                    <span class="section-label">About Me</span>
-                    <h2 class="section-title">Building digital experiences that matter</h2>
-                    <p>
-                        Hi, I'm Kittinan — a Frontend Developer passionate about building intuitive web and mobile applications. I specialize in React, React Native, and TypeScript, with hands-on experience connecting REST APIs and crafting component-based UIs.
-                    </p>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <span class="stat-num">2+</span>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-num">5+</span>
-                            <div class="stat-label">Technologies</div>
-                        </div>
-                        <div class="stat-card">
-                            <span class="stat-num">∞</span>
-                            <div class="stat-label">Always Learning</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container hero-content">
+            <div class="hero-badge reveal">Available for opportunities</div>
+            <h1 class="reveal reveal-delay-1">
+                Kittinan<br>
+                <span class="highlight">Boonkoom</span>
+            </h1>
+            <p class="hero-subtitle reveal reveal-delay-2">
+                Aspiring Frontend Developer with a strong interest in building clean and scalable web and mobile applications using React, React Native, and TypeScript. Eager to learn and gain hands-on experience in real-world projects.
+            </p>
+            <div class="hero-ctas reveal reveal-delay-3">
+                <a href="#projects" class="btn-glow">View My Work →</a>
+                <a href="mailto:kittinan.kb@gmail.com" class="btn-ghost">Get In Touch</a>
             </div>
         </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-        <div class="container">
-            <div class="skills-header reveal">
-                <span class="section-label">Expertise</span>
-                <h2 class="section-title">Skills & Technologies</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category reveal reveal-delay-1">
-                    <span class="skill-icon">⬡</span>
-                    <h3>Frontend Web</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal reveal-delay-2">
-                    <span class="skill-icon">◈</span>
-                    <h3>Mobile Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React Native</span>
-                        <span class="skill-tag">REST API Integration</span>
-                        <span class="skill-tag">State Management</span>
-                    </div>
-                </div>
-                <div class="skill-category reveal reveal-delay-3">
-                    <span class="skill-icon">◻</span>
-                    <h3>Computer Architecture</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">RISC-V CPU Design</span>
-                        <span class="skill-tag">Digital Logic Simulation</span>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
         </div>
-    </section>
+    </header>
 
-    <!-- INTERESTED POSITIONS -->
-    <section id="positions">
-        <div class="container">
-            <div class="reveal">
-                <span class="section-label">Open To</span>
-                <h2 class="section-title">Interested Positions</h2>
-            </div>
-            <div class="positions-grid">
-                <!-- Frontend -->
-                <div class="position-card reveal reveal-delay-1">
-                    <div class="position-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="16 18 22 12 16 6"/>
-                            <polyline points="8 6 2 12 8 18"/>
-                        </svg>
+    <main>
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="profile-wrapper reveal">
+                        <div class="profile-frame">
+                            <img src="profile.jpg" alt="Kittinan Boonkoom"
+                                onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';" />
+                            <div class="avatar-placeholder" style="display:none;">KB</div>
+                        </div>
                     </div>
-                    <div class="position-body">
-                        <span class="position-label">Position</span>
-                        <div class="position-title">Frontend Developer Intern</div>
-                        <p class="position-desc">Building responsive, accessible web interfaces with React and TypeScript. Focused on clean component architecture and smooth user experiences.</p>
-                        <div class="position-badge">React · TypeScript · Tailwind CSS</div>
+                    <div class="about-text reveal reveal-delay-1">
+                        <span class="section-label">About Me</span>
+                        <h2 class="section-title">I'm Kittinan</h2>
+                        <p>
+                            Computer Engineering student passionate about Frontend and Mobile Application Development.
+                            Experienced in building responsive web and mobile applications using React, React Native,
+                            and TypeScript. Skilled in integrating REST APIs and creating scalable, component-based user
+                            interfaces with a focus on clean design and usability.
+                        </p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-num">2+</span>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num">5+</span>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num">∞</span>
+                                <div class="stat-label">Always Learning</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Mobile -->
-                <div class="position-card reveal reveal-delay-2">
-                    <div class="position-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="5" y="2" width="14" height="20" rx="2"/>
-                            <circle cx="12" cy="17" r="1"/>
-                        </svg>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <div class="container">
+                <div class="skills-header reveal">
+                    <span class="section-label">Expertise</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category reveal reveal-delay-1">
+                        <span class="skill-icon">⬡</span>
+                        <h3>Frontend Web</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                        </div>
                     </div>
-                    <div class="position-body">
-                        <span class="position-label">Position</span>
-                        <div class="position-title">Mobile Application Developer Intern</div>
-                        <p class="position-desc">Developing cross-platform mobile apps with React Native. Experienced in REST API integration, state management, and delivering polished mobile UI.</p>
-                        <div class="position-badge">React Native · REST API</div>
+                    <div class="skill-category reveal reveal-delay-2">
+                        <span class="skill-icon">◈</span>
+                        <h3>Mobile Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">REST API Integration</span>
+                            <span class="skill-tag">State Management</span>
+                        </div>
+                    </div>
+                    <div class="skill-category reveal reveal-delay-3">
+                        <span class="skill-icon">◻</span>
+                        <h3>Computer Architecture</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">RISC-V CPU Design</span>
+                            <span class="skill-tag">Digital Logic Simulation</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <div class="container">
-            <div class="projects-header">
+        <section id="positions">
+            <div class="container">
                 <div class="reveal">
-                    <span class="section-label">Work</span>
-                    <h2 class="section-title">Selected Projects</h2>
+                    <span class="section-label">Open To</span>
+                    <h2 class="section-title">Interested Positions</h2>
                 </div>
-            </div>
-            <div class="projects-grid">
-                <!-- Card 1 -->
-                <article class="project-card reveal reveal-delay-1">
-                    <div class="project-img">
-                        <img src="photos/LongDo.png" alt="Longdo Project"
-                            onerror="this.src='https://via.placeholder.com/400x250/0D1E36/60A5FA?text=Longdo'" />
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag"> · TypeScript</span>
-                            <span class="project-tag"> · CSS</span>
-                        </div>
-                        <h3>Longdo</h3>
-                        <p>A web application for searching and previewing movies. Designed and developed with a component-based approach using React and TypeScript.</p>
-                        <div class="project-links">
-                            <a href="https://azazxxc147896325-beep.github.io/LongDo/#/" target="_blank" rel="noopener">↗ Live Demo</a>
-                            <a href="https://github.com/azazxxc147896325/LongDo" target="_blank" rel="noopener">⌥ GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 2 -->
-                <article class="project-card reveal reveal-delay-2">
-                    <div class="project-img">
-                        <img src="photos/DPU_Unilife.png" alt="DPU Unilife Project"
-                            onerror="this.src='https://via.placeholder.com/400x250/0D1E36/60A5FA?text=DPU+Unilife'" />
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">React Native</span>
-                            <span class="project-tag"> · REST API</span>
-                        </div>
-                        <h3>DPU Unilife</h3>
-                        <p>A mobile frontend application for university life management. Integrated REST APIs, managed app state, and delivered a smooth UI experience.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Benz-Strb/DPU_UniLife.git" target="_blank" rel="noopener">⌥ GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Placeholder Card 3 -->
-                <div class="project-card placeholder-card reveal reveal-delay-3">
-                    <div class="placeholder-inner">
-                        <div class="placeholder-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                <div class="positions-grid">
+                    <!-- Frontend -->
+                    <div class="position-card reveal reveal-delay-1">
+                        <div class="position-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
                             </svg>
                         </div>
-                        <p>More projects coming soon</p>
+                        <div class="position-body">
+                            <span class="position-label">Position</span>
+                            <div class="position-title">Frontend Developer Intern</div>
+                            <p class="position-desc">Building responsive, accessible web interfaces with React and
+                                TypeScript. Focused on clean component architecture and smooth user experiences.</p>
+                            <div class="position-badge">React · TypeScript · Tailwind CSS</div>
+                        </div>
+                    </div>
+                    <!-- Mobile -->
+                    <div class="position-card reveal reveal-delay-2">
+                        <div class="position-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" />
+                                <circle cx="12" cy="17" r="1" />
+                            </svg>
+                        </div>
+                        <div class="position-body">
+                            <span class="position-label">Position</span>
+                            <div class="position-title">Mobile Application Developer Intern</div>
+                            <p class="position-desc">Developing cross-platform mobile apps with React Native.
+                                Experienced in REST API integration, state management, and delivering polished mobile
+                                UI.</p>
+                            <div class="position-badge">React Native · REST API</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
 
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="footer-inner">
-            <div>
-                <div class="footer-logo">Kittinan Boonkoom</div>
-                <p class="footer-tagline">Frontend Developer · Bangkok, Thailand</p>
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="container">
+                <div class="projects-header">
+                    <div class="reveal">
+                        <span class="section-label">Work</span>
+                        <h2 class="section-title">Selected Projects</h2>
+                    </div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Card 1 -->
+                    <article class="project-card reveal reveal-delay-1">
+                        <div class="project-img">
+                            <img src="photos/LongDo.png" alt="Longdo Project"
+                                onerror="this.src='https://via.placeholder.com/400x250/0D1E36/60A5FA?text=Longdo'" />
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="project-tag">React</span>
+                                <span class="project-tag"> · TypeScript</span>
+                                <span class="project-tag"> · CSS</span>
+                            </div>
+                            <h3>Longdo</h3>
+                            <p>Developed a web application for searching and previewing movies using React and
+                                TypeScript with a component-based architecture.</p>
+                            <div class="project-links">
+                                <a href="https://azazxxc147896325-beep.github.io/LongDo/#/" target="_blank"
+                                    rel="noopener">Live Demo</a>
+                                <a href="https://github.com/azazxxc147896325-beep/LongDo" target="_blank"
+                                    rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="project-card reveal reveal-delay-2">
+                        <div class="project-img">
+                            <img src="photos/DPU_Unilife.png" alt="DPU Unilife Project"
+                                onerror="this.src='https://via.placeholder.com/400x250/0D1E36/60A5FA?text=DPU+Unilife'" />
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="project-tag">React Native</span>
+                                <span class="project-tag"> · REST API</span>
+                            </div>
+                            <h3>DPU Unilife</h3>
+                            <p>Developed a mobile frontend application for university life management by integrating
+                                REST APIs, managing application state, and delivering a smooth user interface.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Benz-Strb/DPU_UniLife.git" target="_blank"
+                                    rel="noopener">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder Card 3 -->
+                    <div class="project-card placeholder-card reveal reveal-delay-3">
+                        <div class="placeholder-inner">
+                            <div class="placeholder-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="8" x2="12" y2="16" />
+                                    <line x1="8" y1="12" x2="16" y2="12" />
+                                </svg>
+                            </div>
+                            <p>More projects coming soon</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="social-links">
-                <!-- GitHub -->
-                <a href="https://github.com/azazxxc147896325-beep" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
-                    </svg>
-                </a>
-                <!-- LINE -->
-                <a href="https://line.me/ti/p/y2--UgvvMr" target="_blank" rel="noopener" class="social-link" aria-label="LINE">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-                    </svg>
-                </a>
-                <!-- Email -->
-                <a href="mailto:kittinan.kb@gmail.com" class="social-link" aria-label="Email">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"/>
-                        <path d="M2 7l10 7 10-7"/>
-                    </svg>
-                </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <div class="footer-logo">Kittinan Boonkoom</div>
+                    <p class="footer-bottom">&copy; 2026 Kittinan Boonkoom. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <!-- GitHub -->
+                    <a href="https://github.com/azazxxc147896325-beep" target="_blank" rel="noopener"
+                        class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                        </svg>
+                    </a>
+                    <!-- LINE -->
+                    <a href="https://line.me/ti/p/y2--UgvvMr" target="_blank" rel="noopener" class="social-link"
+                        aria-label="LINE">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+                        </svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:kittinan.kb@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M2 7l10 7 10-7" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-        <p class="footer-bottom">&copy; 2025 Kittinan Boonkoom. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-<script>
-// Navbar scroll
-    const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const y = window.pageYOffset;
-        if (y > 50) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-        if (y > lastScroll && y > 400) navbar.style.transform = 'translateY(-100%)';
-        else navbar.style.transform = 'translateY(0)';
-        lastScroll = y;
-    });
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileNav = document.getElementById('mobileNav');
-    menuBtn.addEventListener('click', () => mobileNav.classList.toggle('active'));
-    document.querySelectorAll('.mobile-nav a').forEach(a => {
-        a.addEventListener('click', () => mobileNav.classList.remove('active'));
-    });
-
-    // Reveal on scroll
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
-            }
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const y = window.pageYOffset;
+            if (y > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+            lastScroll = y;
         });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Hero reveals immediately
-    document.querySelectorAll('#hero .reveal').forEach(el => {
-        setTimeout(() => el.classList.add('active'), 100);
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            e.preventDefault();
-            const target = document.querySelector(a.getAttribute('href'));
-            if (target) {
-                const offset = navbar.offsetHeight;
-                window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
-            }
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        menuBtn.addEventListener('click', () => mobileNav.classList.toggle('active'));
+        document.querySelectorAll('.mobile-nav a').forEach(a => {
+            a.addEventListener('click', () => mobileNav.classList.remove('active'));
         });
-    });
-</script>
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Hero reveals immediately
+        document.querySelectorAll('#hero .reveal').forEach(el => {
+            setTimeout(() => el.classList.add('active'), 100);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    const offset = navbar.offsetHeight;
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
