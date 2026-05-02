@@ -1116,7 +1116,9 @@
                 <span class="highlight">Boonkoom</span>
             </h1>
             <p class="hero-subtitle reveal reveal-delay-2">
-                Aspiring Frontend Developer with a strong interest in building clean and scalable web and mobile applications using React, React Native, and TypeScript. Eager to learn and gain hands-on experience in real-world projects.
+                Aspiring Frontend Developer with a strong interest in building clean and scalable web and mobile
+                applications using React, React Native, and TypeScript. Eager to learn and gain hands-on experience in
+                real-world projects.
             </p>
             <div class="hero-ctas reveal reveal-delay-3">
                 <a href="#projects" class="btn-glow">View My Work →</a>
@@ -1132,10 +1134,12 @@
                 <div class="about-grid">
                     <div class="profile-wrapper reveal">
                         <div class="profile-frame">
-                           <img src="photos/profile.png"> alt="Kittinan Boonkoom"
-                                onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';" />
+                            <<img src="photos/profile.png" alt="Kittinan Boonkoom" onerror="this.style.display='none'; 
+                            const avatar = this.parentElement.parentElement.querySelector('.avatar-placeholder');
+                            if(avatar){ avatar.style.display='flex'; }">
+                            <div class="avatar-placeholder" style="display: none;">KB</div>
                         </div>
-                        <div class="avatar-placeholder" style="display: none;">KB</div>
+                        
                     </div>
                     <div class="about-text reveal reveal-delay-1">
                         <span class="section-label">About Me</span>
