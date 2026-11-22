@@ -45,8 +45,6 @@ const thai = {
   "Implementation evidence": "หลักฐานการพัฒนา",
   "Implementation outcomes; user-impact metrics have not been measured.": "หลักฐานแสดงสิ่งที่พัฒนาได้ ยังไม่มีการวัดผลต่อผู้ใช้งาน",
   "Explore project": "ดูโปรเจกต์",
-  "Personal & team projects. Team roles are described explicitly.": "ผลงานส่วนตัวและงานทีม พร้อมระบุหน้าที่ในแต่ละทีม",
-  "View details & source": "ดูรายละเอียดและซอร์สโค้ด",
   "Skills & technologies": "ทักษะและเทคโนโลยี",
   "Tools I use in projects and engineering coursework.": "เครื่องมือที่ใช้ในโปรเจกต์และวิชาเรียนด้านวิศวกรรม",
   "Frontend": "ส่วนหน้าเว็บ",
