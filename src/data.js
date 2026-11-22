@@ -6,7 +6,7 @@ export const profile = {
   interests: ['Frontend Development', 'Full Stack Development', 'Mobile Development'],
   about: "I'm a Computer Engineering student with hands-on experience from personal and team projects. My work includes web and mobile interfaces, API integration, and database-backed features.",
   details: "I've contributed to course scheduling, realtime notifications, and OCR-based timetable imports. I'm seeking a co-op placement where I can apply these skills, learn from code reviews and team workflows, and contribute under the guidance of experienced developers.",
-  portrait: `${import.meta.env.BASE_URL}images/portraits/portrait-9204.png`, email: 'azazxxc147896325@gmail.com',
+  portrait: `${import.meta.env.BASE_URL}images/profile.png`, email: 'azazxxc147896325@gmail.com',
   github: 'https://github.com/azazxxc147896325-beep', linkedin: null,
   line: 'https://line.me/ti/p/y2--UgvvMr', resume: `${import.meta.env.BASE_URL}files/Resume_Kittinan.pdf`,
   skills: [
